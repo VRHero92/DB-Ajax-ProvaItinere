@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Esercitazione Basi di Dati 01/06</title>
+    <script type='text/javascript'>
+    function checkForm()
+    {
+	     // Controlla che username e password non siano vuoti
+	      if(document.login_form.username.value == '' ||
+	      document.login_form.password.value == ''){
+		         alert('Inserire username e password');
+		         return false;
+	           }
+	     // Se arriviamo qui, tutto ok
+	     return true;
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Inserisci i tuoi dati</h1>
+
+    <h3>Login</h3>
+    <form name="login_form" action="login.php" method="post" onsubmit="return checkForm">
+      Username: <input type="text" name="username"><br><br>
+      Password: <input type="password" name="password"><br><br>
+      <input type="submit" name="submit" value="Login">
+     </form>
+
+  </body>
+</html>
